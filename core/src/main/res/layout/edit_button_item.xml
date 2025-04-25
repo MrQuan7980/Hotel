@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buttonId"
+    style="@style/buttonBarItem_LinearLayout">
+
+    <ImageView
+        style="@style/buttonBarItem_ImageView"
+        android:id="@+id/icon"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/buttonBarItem_TextView"/>
+
+    <View
+        android:id="@+id/indicator"
+        style="@style/buttonBarItem_View"/>
+
+</LinearLayout>
