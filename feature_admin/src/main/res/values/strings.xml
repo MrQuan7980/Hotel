@@ -1,0 +1,43 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titleRoom">Quản lí phòng</string>
+    <string name="textRoom">Booking Hotel theo mô hình khách sạn Sofitel Hà Nội</string>
+    <string name="inputRoom">Tìm kiếm phòng</string>
+    <string name="btnRoom">Tìm kiếm</string>
+    <string name="btnAdd">Thêm phòng</string>
+    <string name="textNoBooking">Không có phòng nào</string>
+    <string name="titleAddRoom">Xin chào bạn quản lý</string>
+    <string name="textAddRoom">Đăng phòng mới chỉ với vài bước đơn giản!</string>
+
+    // add room
+    <string name="numberRoom">Số phòng</string>
+    <string name="textCity">Thành phố</string>
+    <string name="textLocation">Địa điểm</string>
+    <string name="roomName">Tên phòng</string>
+    <string name="image1">Hình ảnh mô tả phòng</string>
+    <string name="image2">Hình ảnh mô tả tiện nghi</string>
+    <string name="textDate">Ngày tạo phòng</string>
+    <string name="textMoney">Nhập vào số tiền</string>
+    <string name="textDiscount">Giảm giá</string>
+    <string name="textAcreage">Diện tích</string>
+    <string name="textMaxPeople">Số người</string>
+    <string name="btnAddRoom">Đăng phòng</string>
+    <string name="textTransfer">Chuyển khoản</string>
+    <string name="textCash">Tiền mặt</string>
+
+    <string name="inputNumberRoom">Vui lòng nhập vào số phòng</string>
+    <string name="inputCity">Vui lòng nhập thành phố</string>
+
+    <string name="inputLocation">Vui lòng nhập vào địa chỉ</string>
+    <string name="inputTitle">Vui lòng nhập vào tên phòng</string>
+    <string name="inputImage">Vui lòng nhập vào hình ảnh</string>
+    <string name="inputDate">Vui lòng nhập vào ngày tạo phòng</string>
+    <string name="inputDateFormat">Ngày tạo không được nhỏ hơn ngày hiện tại</string>
+    <string name="inputMoney">Vui lòng nhập vào tiền phòng</string>
+    <string name="inputPeople">Vui lòng nhập vào số người trong phòng</string>
+    <string name="inputArea">Vui lòng nhập vào diện tích phòng</string>
+    <string name="inputDiscount">Vui lòng nhập vào giảm giá nếu có</string>
+    <string name="mark">/</string>
+    <string name="textCustomer">Khách</string>
+</resources>

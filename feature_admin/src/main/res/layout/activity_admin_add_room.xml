@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/primary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AdminAddRoomActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        tools:ignore="UselessLeaf">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <VideoView
+                app:layout_constraintTop_toBottomOf="@id/linearTitleAdd"
+                android:id="@+id/video"
+                android:layout_marginTop="-18dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+            <LinearLayout
+                android:id="@+id/linearTitleAdd"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical"
+                android:background="@drawable/bg_fragment_booking"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_marginTop="35dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="@string/titleAddRoom"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_margin="7dp"
+                    android:layout_gravity="center"
+                    android:text="@string/textAddRoom"
+                    style="@style/textView"/>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="1000dp">
+            <LinearLayout
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_view_admin_add_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp">
+
+                    <EditText
+                        android:id="@+id/inputNumberRoom"
+                        android:hint="@string/numberRoom"
+                        android:inputType="number"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="7dp"
+                        android:drawableStart="@drawable/ic_number_room"
+                        android:layout_weight="1"
+                        style="@style/editTextAddRoom"
+                        tools:ignore="LabelFor" />
+
+                    <EditText
+                        android:id="@+id/inputCity"
+                        android:hint="@string/textCity"
+                        android:drawableStart="@drawable/ic_city"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:layout_margin="7dp"
+                        style="@style/editTextAddRoom"
+                        tools:ignore="LabelFor" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/inputTitle"
+                    android:drawableStart="@drawable/ic_title"
+                    android:hint="@string/roomName"
+                    android:inputType="text"
+                    android:layout_margin="7dp"
+                    style="@style/editText"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:id="@+id/inputLocation"
+                    android:drawableStart="@drawable/ic_location"
+                    android:hint="@string/textLocation"
+                    android:inputType="text"
+                    android:layout_margin="7dp"
+                    style="@style/editText"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:id="@+id/imageRoomOne"
+                    android:drawableStart="@drawable/ic_image"
+                    android:hint="@string/image1"
+                    android:inputType="text"
+                    android:layout_margin="7dp"
+                    style="@style/editText"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:id="@+id/imageRoomTwo"
+                    android:drawableStart="@drawable/ic_image"
+                    android:hint="@string/image1"
+                    android:inputType="text"
+                    android:layout_margin="7dp"
+                    style="@style/editText"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:id="@+id/imageRoomThree"
+                    android:drawableStart="@drawable/ic_image"
+                    android:hint="@string/image1"
+                    android:inputType="text"
+                    android:layout_margin="7dp"
+                    style="@style/editText"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:id="@+id/imageRoomFour"
+                    android:drawableStart="@drawable/ic_image"
+                    android:hint="@string/image2"
+                    android:inputType="text"
+                    android:layout_margin="7dp"
+                    style="@style/editText"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:id="@+id/imageRoomFive"
+                    android:drawableStart="@drawable/ic_image"
+                    android:hint="@string/image2"
+                    android:inputType="text"
+                    android:layout_margin="7dp"
+                    style="@style/editText"
+                    tools:ignore="LabelFor" />
+
+                <EditText
+                    android:id="@+id/inputDate"
+                    android:drawableStart="@drawable/ic_date"
+                    android:hint="@string/textDate"
+                    android:inputType="date"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_margin="7dp"
+                    style="@style/editText"
+                    tools:ignore="KeyboardInaccessibleWidget" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp">
+
+                    <EditText
+                        android:id="@+id/inputMoney"
+                        android:hint="@string/textMoney"
+                        android:inputType="text"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="7dp"
+                        android:drawableStart="@drawable/ic_money"
+                        android:layout_weight="1.5"
+                        style="@style/editTextAddRoom"
+                        tools:ignore="LabelFor" />
+
+                    <EditText
+                        android:id="@+id/inputPeople"
+                        android:hint="@string/textMaxPeople"
+                        android:drawableStart="@drawable/ic_group"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:layout_margin="7dp"
+                        style="@style/editTextAddRoom"
+                        tools:ignore="LabelFor" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <EditText
+                        android:id="@+id/inputDiscount"
+                        android:hint="@string/textDiscount"
+                        android:inputType="text"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="7dp"
+                        android:drawableStart="@drawable/ic_discount"
+                        android:layout_weight="1"
+                        style="@style/editTextAddRoom"
+                        tools:ignore="LabelFor" />
+
+                    <EditText
+                        android:id="@+id/inputArea"
+                        android:hint="@string/textAcreage"
+                        android:drawableStart="@drawable/ic_area"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:layout_margin="7dp"
+                        style="@style/editTextAddRoom"
+                        tools:ignore="LabelFor" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_margin="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAdminAddRoom"
+                        android:text="@string/btnAddRoom"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@drawable/button_white"
+                        style="@style/buttonWhite"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressbar"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:indeterminate="true"
+                        style= "@style/progressbar"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

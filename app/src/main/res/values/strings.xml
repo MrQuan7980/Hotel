@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Booking Hotel</string>
+    <string name="warning">Ứng dụng chỉ là một sản phẩm demo, không có mục địch mạo danh doanh nghiệp</string>
+    <string name="input_username">Nhập vào tài khoản</string>
+    <string name="input_name">Nhập vào tên của bạn</string>
+    <string name="input_phone">Nhập vào số điện thoại</string>
+    <string name="input_password">Nhập vào mật khẩu</string>
+    <string name="forgot_password"><u>Bạn quên mật khẩu</u></string>
+    <string name="signIn">Đăng nhập</string>
+    <string name="loginSentence">Bạn chưa có tài khoản?</string>
+    <string name="register">Đăng kí</string>
+    <string name="textCreateAccount">Tạo tài khoản của bạn</string>
+    <string name="textOr">Nếu chưa có, mời bạn đăng kí</string>
+    <string name="back">back</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textBooking">Hãy chọn phòng cho chuyến đi sắp tới!</string>
+    <string name="textHotel">Hơn 100 tour du lịch đang chờ bạn</string>
+    <string name="text">Nhập địa điểm </string>
+    <string name="button_search">Tìm kiếm</string>
+    <string name="textNoBooking">Không có phòng nào</string>
+    <string name="titleSaved">Phòng bạn đã yêu thích</string>
+    <string name="textSaved">Khám phá lại những nơi bạn đã yêu thích</string>
+    <string name="textReservation">Chuyến đi</string>
+    <string name="isActive">Đang hoạt động</string>
+    <string name="textPast">Đã qua</string>
+    <string name="textCanceled">Đã hủy</string>
+    <string name="logout">Đăng xuất</string>
+
+    // forgot passowrd
+    <string name="buttonForgotPassword">Xác nhận</string>
+    <string name="otpFall">Bạn nhập OTP sai</string>
+    <string name="restorePassword">Khôi phục mật khẩu</string>
+    <string name="textRestorePassword">Vui lòng, bạn làm theo các bước chúng tôi yêu cầu</string>
+    <string name="inputNewPassword">Nhập vào mật khẩu mới</string>
+    <string name="errorInputOTP">Vui lòng nhập đầy đủ mã OTP</string>
+    <string name="resendOTP"><u>Gửi lại mã OTP</u></string>
+
+
+    // text sign In
+    <string name="checkEmail">Vui lòng nhập vào gmail</string>
+    <string name="formatEmail">Gmail không đúng định dạng</string>
+    <string name="checkPassword">Vui lòng nhập vào mật khẩu</string>
+    <string name="success_admin">Đăng nhập quản lí thành công</string>
+
+    <string name="success">Đăng nhập thành công</string>
+    <string name="register_success">Đăng kí thành công</string>
+    <string name="error">Email or password is incorrect</string>
+
+    // register
+    <string name="inputName">Vui lòng nhập vào họ tên</string>
+    <string name="inputPhone">Vui lòng nhập vào số điện thoại</string>
+    <string name="formatPhone">Vui lòng nhập vào số điện thoại đúng định dạng</string>
+
+</resources>
