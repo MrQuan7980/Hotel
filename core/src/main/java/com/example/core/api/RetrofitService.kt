@@ -27,6 +27,4 @@ interface RetrofitService {
 
     @POST("room.json")
     suspend fun insertRoom(@Body room: Room) : retrofit2.Response<Room>
-
-
 }

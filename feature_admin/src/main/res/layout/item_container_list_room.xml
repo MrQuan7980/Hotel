@@ -30,6 +30,26 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="UnusedAttribute" />
 
+        <FrameLayout
+            android:id="@+id/statusRoom"
+            android:visibility="gone"
+            android:background="@drawable/bg_already_booked"
+            android:padding="9dp"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="@string/alreadyBooked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+
+
         <TextView
             style="@style/textViewTitle"
             android:id="@+id/titleRoom"
@@ -85,6 +105,45 @@
             app:layout_constraintStart_toEndOf="@id/textMaxPeople"
             app:layout_constraintTop_toBottomOf="@+id/textCity"
             app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/linearOnButton"
+            app:layout_constraintTop_toBottomOf="@id/pictureUrl"
+            app:layout_constraintEnd_toEndOf="@id/pictureUrl"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnOnUpdate"
+                android:text="@string/textEdit"
+                style="@style/btnOnEditAndDelete"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnOnDelete"
+                android:text="@string/textDelete"
+                style="@style/btnOnEditAndDelete"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearOffButton"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/pictureUrl"
+            app:layout_constraintEnd_toEndOf="@id/pictureUrl"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnOffUpdate"
+                android:text="@string/textEdit"
+                style="@style/btnOffEditAndDelete"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnOffDelete"
+                android:text="@string/textDelete"
+                style="@style/btnOffEditAndDelete"/>
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

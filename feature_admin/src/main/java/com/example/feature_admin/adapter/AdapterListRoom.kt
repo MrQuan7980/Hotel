@@ -2,6 +2,7 @@ package com.example.feature_admin.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -33,6 +34,9 @@ class AdapterListRoom (private var listRoom: List<Room>) :
     ) : RecyclerView.ViewHolder(binding.root) {
         fun setData(room: Room)
         {
+            binding.statusRoom.visibility = if (room.status == true) View.VISIBLE else View.GONE
+            binding.linearOnButton.visibility = if (room.status == true) View.GONE else View.VISIBLE
+            binding.linearOffButton.visibility = if (room.status == true) View.VISIBLE else View.GONE
             binding.titleRoom.text = room.title
             Glide.with(binding.root.context)
                 .load(room.imageOne)

@@ -38,6 +38,9 @@ class RoomManagerFragment : Fragment() {
         binding.buttonAdd.setOnClickListener {
             requireContext().openIntent<AdminAddRoomActivity>()
         }
+        binding.loading.setOnClickListener {
+            viewModelRoom.showListRoom()
+        }
     }
     private fun checkRenderAPI()
     {

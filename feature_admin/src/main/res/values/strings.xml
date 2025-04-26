@@ -40,4 +40,8 @@
     <string name="inputDiscount">Vui lòng nhập vào giảm giá nếu có</string>
     <string name="mark">/</string>
     <string name="textCustomer">Khách</string>
+    <string name="alreadyBooked">Đã đặt</string>
+
+    <string name="textEdit">Sửa</string>
+    <string name="textDelete">Xóa</string>
 </resources>
