@@ -5,7 +5,7 @@ import android.content.Intent
 import com.example.appbookinghotel.view.SignInActivity
 import com.example.core.intent.IntentActivity
 
-class AppIntentNavigator : IntentActivity{
+class AppIntentNavigator : IntentActivity {
     override fun screenTransition(context: Context) {
         val intent = Intent(context, SignInActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
