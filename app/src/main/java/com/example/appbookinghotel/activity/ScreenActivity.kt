@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.appbookinghotel.databinding.ActivityScreenBinding
-import com.example.appbookinghotel.view.SignInActivity
+import com.example.appbookinghotel.view.auth.SignInActivity
 
 class ScreenActivity : AppCompatActivity() {
     private lateinit var binding : ActivityScreenBinding

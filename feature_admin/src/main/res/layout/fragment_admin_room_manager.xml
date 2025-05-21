@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.RoomManagerFragment">
+    tools:context=".fragment.RoomManagementFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 android:text="@string/textRoom" />
 
             <EditText
-                android:id="@+id/inputShip"
+                android:id="@+id/inputSearch"
                 style="@style/editText"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
@@ -92,25 +92,16 @@
         <TextView
             style="@style/textViewContentBold"
             android:id="@+id/noData"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="505dp"
             android:layout_marginBottom="25dp"
             android:text="@string/textNoBooking"
             android:textColor="@color/red"
             android:visibility="invisible"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
-        <ImageView
-            android:id="@+id/loading"
-            android:src="@drawable/ic_add"
-            android:layout_margin="15dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="30dp"
-            android:layout_height="30dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -9,9 +9,10 @@ import com.bumptech.glide.Glide
 import com.example.feature_admin.R
 import com.example.core.`object`.Room
 import com.example.feature_admin.databinding.ItemContainerListRoomBinding
+import com.example.feature_admin.listeners.DeleteRoom
 import java.text.DecimalFormat
 
-class AdapterListRoom (private var listRoom: List<Room>) :
+class AdapterListRoom (private var listRoom: List<Room>, private val delete : DeleteRoom) :
     RecyclerView.Adapter<AdapterListRoom.RoomViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RoomViewHolder {
         val binding = ItemContainerListRoomBinding.inflate(LayoutInflater.from(parent.context), parent, false);
@@ -46,6 +47,10 @@ class AdapterListRoom (private var listRoom: List<Room>) :
             binding.textMoney.text = format
             binding.textCity.text = room.city
             binding.textMaxPeople.text = room.maxGuests?.toInt().toString()
+
+            binding.btnOnDelete.setOnClickListener {
+                delete.onDeleteClick(room.numberRoom!!)
+            }
         }
         fun formatWithMoney(number : Int) : String {
             val formatter = DecimalFormat("#,###")

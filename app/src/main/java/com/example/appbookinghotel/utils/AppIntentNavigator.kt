@@ -2,7 +2,7 @@ package com.example.appbookinghotel.utils
 
 import android.content.Context
 import android.content.Intent
-import com.example.appbookinghotel.view.SignInActivity
+import com.example.appbookinghotel.view.auth.SignInActivity
 import com.example.core.intent.IntentActivity
 
 class AppIntentNavigator : IntentActivity {

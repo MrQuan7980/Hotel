@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.HistoryFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearHead"
+        android:background="@drawable/bg_view_head_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/textViewTitle"
+            android:text="@string/textReservation" />
+        
+        <ImageView
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_notification"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="27dp"
+            android:layout_height="27dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearView"
+        android:layout_margin="10dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/linearHead"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        tools:ignore="UselessLeaf">
+
+        <FrameLayout
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                style="@style/bgViewImageHeadHistory"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                style="@style/textViewHistory"
+                android:text="@string/isActive" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_weight="1.1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                style="@style/bgViewImageHeadHistory"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                style="@style/textViewHistory"
+                android:text="@string/textPast" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_weight="1.1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                style="@style/bgViewImageHeadHistory"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                style="@style/textViewHistory"
+                android:text="@string/textCanceled" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        app:layout_constraintTop_toBottomOf="@id/linearView"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessLeaf">
+
+
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -72,7 +72,6 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/blue</item>
-        
     </style>
     
     <style name="buttonWhite">
@@ -83,7 +82,7 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/blue</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_height">55dp</item>
     </style>
 
     <style name="LinearLayoutAuthentication">
@@ -129,10 +128,25 @@
         <item name="android:textColor">@color/blue</item>
     </style>
 
+    <style name="textTitleInfo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
     <style name="imageBack">
         <item name="android:layout_width">35dp</item>
         <item name="android:layout_height">35dp</item>
         <item name="android:src">@drawable/back</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
     </style>
 
     <style name="buttonBarItem_LinearLayout">
@@ -228,4 +242,191 @@
         <item name="android:layout_marginTop">5dp</item>
     </style>
 
+
+
+    // detail room
+
+    <style name="frameImage">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="bgOutsideImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">6dp</item>
+        <item name="android:background">@drawable/bg_image_mini_blue</item>
+    </style>
+
+    <style name="bgImageInSide">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">7dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/darkBlue</item>
+        <item name="android:background">@drawable/image_mini_detail</item>
+        <item name="android:clipToOutline" tools:targetApi="31" tools:ignore="ContentDescription">true</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+
+    <style name="bgIconDetail">
+        <item name="android:layout_width">23dp</item>
+        <item name="android:layout_height">23dp</item>
+        <item name="tint" tools:ignore="MissingConstraints,UseAppTint, ContentDescription" >@color/darkBlue</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+
+    <style name="textViewDetail">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/darkBlue</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginTop">17dp</item>
+    </style>
+
+    <style name="setTextDetail">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/darkBlue</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginTop">17dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:maxWidth">255dp</item>
+        <item name="android:gravity">end</item>
+
+    </style>
+
+    <style name="linearImageDetail">
+        <item name="android:background">@drawable/bg_frame_images</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">45dp</item>
+        <item name="android:layout_marginEnd">45dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:baselineAligned">false</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <style name="textViewReview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/darkBlue</item>
+    </style>
+
+    <style name="linearImageMini">
+        <item name="android:background">@drawable/bg_frame_images</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">45dp</item>
+        <item name="android:layout_marginEnd">45dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:baselineAligned">false</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <style name="constrainInformation">
+        <item name="android:background">@drawable/bg_constraint_information_room</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:baselineAligned">false</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="linearButton">
+        <item name="android:background">@drawable/bg_frame_images</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:baselineAligned" tools:ignore="UselessLeaf">false</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+    </style>
+
+    <style name="textViewIntroduce">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="android:justificationMode" tools:targetApi="26">inter_word</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/darkBlue</item>
+    </style>
+
+
+    <style name="setTextChar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/darkBlue</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">start</item>
+        <item name="android:maxWidth">255dp</item>
+
+    </style>
+
+    <style name="inputPlane">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textColor">@color/darkBlue</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:layout_marginTop"  tools:ignore="Autofill,LabelFor,RtlSymmetry">8dp</item>
+        <item name="android:background">@drawable/bg_input_plane</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <style name="inputConfirm">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textColor">@color/darkBlue</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:inputType" tools:ignore="Autofill,LabelFor,RtlSymmetry">text</item>
+        <item name="android:background">@drawable/bg_input_plane</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <style name="inputCar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textColor">@color/darkBlue</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:background">@drawable/bg_input_plane</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+    
+    
+    <style name="textViewHistory">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/darkBlue</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="bgViewImageHeadHistory">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/bg_button_reservation</item>
+    </style>
+    
 </resources>

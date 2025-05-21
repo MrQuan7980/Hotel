@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_view_comment"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/titleEvaluation"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/darkBlue"
+            android:text="@string/btnEvaluation"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iconEvaluation"
+            android:importantForAccessibility="no"
+            android:tint="@color/lightBlue"
+            android:layout_marginStart="-10dp"
+            android:src="@drawable/heading_border"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleEvaluation"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:textSize="15sp"
+            android:text="@string/textConfirmDelete"
+            android:id="@+id/textIntroduceOne"
+            style="@style/textViewIntroduce"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDelete"
+                style="@style/buttonWhite"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toStartOf="@id/btnCancel"
+                android:background="@drawable/bg_button_review"
+                android:layout_marginStart="150dp"
+                android:text="@string/btnDeleteReview"
+                android:textColor="@color/white"
+                android:layout_height="50dp"
+                android:layout_width="200dp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCancel"
+                style="@style/buttonWhite"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/bg_button_review"
+                android:layout_marginStart="150dp"
+                android:text="@string/btnCancel"
+                android:textColor="@color/white"
+                android:layout_height="50dp"
+                android:layout_width="120dp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

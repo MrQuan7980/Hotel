@@ -50,5 +50,54 @@
     <string name="inputName">Vui lòng nhập vào họ tên</string>
     <string name="inputPhone">Vui lòng nhập vào số điện thoại</string>
     <string name="formatPhone">Vui lòng nhập vào số điện thoại đúng định dạng</string>
+    <string name="titleInfoRoom">Thông tin phòng</string>
+    // comment
+
+    <string name="titleComment">Đánh giá</string>
+    <string name="btnReview">Gửi đánh giá</string>
+    <string name="textReview">Vui lòng nhập nội dung đánh giá</string>
+    <string name="inputReview">Vui lòng chọn ít nhất 1 sao</string>
+
+    // text plane
+    <string name="titlePlane">Mở cánh cửa khám phá cùng Sofitel Hà Nội</string>
+    <string name="textPlane">Sofitel Hà Nội - Đặt chân lên đỉnh mây với một bước nhảy</string>
+    <string name="oneWay">Một chiều</string>
+    <string name="roundTrip">Khứ hồi</string>
+    <string name="textStartPoint">Điểm đi</string>
+    <string name="textEndPoint">Điểm đến</string>
+    <string name="textDatePlane">Ngày đi</string>
+    <string name="textHour">Giờ đi</string>
+
+    <string name="textButtonPlane">Tìm chuyến bay</string>
+    <string name="Plane">Chuyến bay</string>
+    <string name="Car">Thuê xe</string>
+
+    <string name="textButtonCar">Tìm chuyến</string>
+    <string name="motoBike">Xe máy</string>
+    <string name="textCar">Xe ô tô</string>
+
+    // text introduce
+
+    <string name="titleIntroduce1">Sofitel Legend Metropole Hà Nội – Biểu tượng \n của sự sang trọng và lịch sử</string>
+    <string name="phoneSofitel">0292999999</string>
+    <string name="emailSofitel">sofitel@hanoi.com</string>
+    <string name="textIntroduce">Sofitel Hà Nội là sự kết hợp hoàn hảo giữa nét duyên dáng cổ điển Pháp và sự tinh tế hiện đại, tọa lạc ngay trung tâm thủ đô. Với hơn 120 năm lịch sử, khách sạn là điểm đến hàng đầu của các nguyên thủ, doanh nhân và du khách muốn tận hưởng sự sang trọng tuyệt đối. Từ những phòng nghỉ tinh tế đến nhà hàng đạt chuẩn quốc tế, spa thư giãn, và khu vườn yên tĩnh giữa phố cổ – Sofitel Hà Nội không chỉ là nơi lưu trú, mà còn là nơi lưu giữ những trải nghiệm khó quên.</string>
+    <string name="itemIntroduce">Giới thiệu về chúng tôi</string>
+    <string name="itemBook">Điều khoản và điều kiện</string>
+    <string name="itemPolicy">Chính sách riêng tư</string>
+    <string name="itemSupport">Hỗ trợ khách hàng</string>
+    <string name="itemSettingAccount">Cài đặt tài khoản của bạn</string>
+
+    <string name="textConfirmDelete">Bạn có muốn xóa đánh giá?</string>
+    <string name="btnDeleteReview">Xóa đánh giá</string>
+    <string name="btnCancel">Hủy</string>
+
+    <string name="textDateCheckIn">Ngày nhận phòng</string>
+    <string name="textDateCheckOut">Ngày trả phòng</string>
+    <string name="textChildren">Trẻ em</string>
+    <string name="textAgeChildren">Số tuổi</string>
+    <string name="textRequest">Nhập yêu cầu của bạn</string>
+
+    <string name="textQuantity">Số lượng</string>
 
 </resources>

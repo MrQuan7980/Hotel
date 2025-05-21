@@ -1,8 +1,11 @@
 package com.example.appbookinghotel.di
 
-import com.example.appbookinghotel.model.ForgotPasswordRepository
-import com.example.appbookinghotel.model.RegisterRepository
-import com.example.appbookinghotel.model.SignInRepository
+import com.example.appbookinghotel.model.auth.ForgotPasswordRepository
+import com.example.appbookinghotel.model.auth.RegisterRepository
+import com.example.appbookinghotel.model.auth.SignInRepository
+import com.example.appbookinghotel.model.room.IntroduceRepository
+import com.example.appbookinghotel.model.room.ReviewRoomRepository
+import com.example.appbookinghotel.model.room.UserRoomRepository
 import com.example.appbookinghotel.utils.AppIntentNavigator
 import com.example.core.intent.IntentActivity
 import dagger.Module
@@ -16,7 +19,7 @@ import javax.inject.Singleton
 object AppModule {
     @Provides
     @Singleton
-    fun provideForgotPassword() : ForgotPasswordRepository{
+    fun provideForgotPassword() : ForgotPasswordRepository {
         return ForgotPasswordRepository()
     }
 
@@ -28,7 +31,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideRegister() : RegisterRepository{
+    fun provideRegister() : RegisterRepository {
         return RegisterRepository()
     }
 
@@ -38,4 +41,21 @@ object AppModule {
         return SignInRepository()
     }
 
+    @Provides
+    @Singleton
+    fun provideUserRoomRepository() : UserRoomRepository {
+        return UserRoomRepository()
+    }
+
+    @Provides
+    @Singleton
+    fun provideReviewRoomRepository() : ReviewRoomRepository{
+        return ReviewRoomRepository()
+    }
+
+    @Provides
+    @Singleton
+    fun provideIntroduce() : IntroduceRepository{
+        return IntroduceRepository()
+    }
 }

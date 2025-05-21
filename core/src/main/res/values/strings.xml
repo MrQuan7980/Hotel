@@ -1,1 +1,33 @@
-<resources></resources>
+<resources>
+    <string name="customer">/ Phòng</string>
+    <string name="text1">Phòng</string>
+    <string name="area">m²</string>
+    <string name="maxPeople">Tối đa:</string>
+    <string name="textNumberRoom">Số phòng</string>
+    <string name="textArea">Diện tích</string>
+    <string name="textPeople">Sức chứa</string>
+    <string name="textDate">Ngày đăng</string>
+    <string name="textAddress">Địa chỉ</string>
+    <string name="textBoss">Điều hành</string>
+    <string name="setBoss">Khách sạn Sofi Hà Nội</string>
+
+    // AppCompatButton
+    
+    <string name="btnCharacteristics">Đặc điểm</string>
+    <string name="textCharacteristics">Đặc điểm nổi bật</string>
+    <string name="btnIntroduction">Giới thiệu</string>
+    <string name="btnBooking">Đặt phòng</string>
+    <string name="btnEvaluation">Đánh giá</string>
+    <string name="textEvaluation">Đánh giá của bạn về chất lượng dịch vụ</string>
+    <string name="inputYourReview">Nhập đánh giá của bạn</string>
+    <string name="textReview">Những đánh giá của khách hàng khác</string>
+    <string name="textPriceRoom">Giá phòng</string>
+    <string name="titlePriceRoom"></string>
+    <string name="textSumMoney">Tổng tiền</string>
+    <string name="btnBook">Đặt ngay</string>
+
+    <string name="titleIntroduce">Giới thiệu</string>
+    <string name="textIntroduce">Khám phá Hà Nội</string>
+
+
+</resources>

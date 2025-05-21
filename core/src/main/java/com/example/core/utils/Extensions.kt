@@ -7,7 +7,13 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
+import com.example.core.`object`.Room
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import java.util.UUID
 
 fun Context.setMessage (message : String)
 {
@@ -69,6 +75,12 @@ fun Context.showView(view : View, status : Int)
     view.visibility = status
 }
 
+fun Context.showViewSuccess(view1 : View, view2 : View, status : Boolean)
+{
+    view1.visibility = if (status) View.VISIBLE else View.GONE
+    view2.visibility = if (status) View.GONE else View.VISIBLE
+}
+
 fun Context.showProgressbar (
     isLoading : Boolean,
     button : View,
@@ -105,6 +117,12 @@ fun Context.backOTPField(left : EditText, right : EditText)
     })
 }
 
+fun Context.formatDate() : String {
+    val now = Date()
+    val format = SimpleDateFormat("HH:mm dd-MM-yyyy", Locale.getDefault())
+    return format.format(now)
+}
 
-
-
+fun randomId() : String {
+    return UUID.randomUUID().toString()
+}

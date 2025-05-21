@@ -17,6 +17,7 @@ class PerformDataStore (private val context: Context) {
         val KEY_NAME = stringPreferencesKey(DataStoreKeys.KEY_NAME)
         val KEY_EMAIL = stringPreferencesKey(DataStoreKeys.KEY_EMAIL)
         val KEY_PHONE = stringPreferencesKey(DataStoreKeys.KEY_PHONE)
+        val KEY_ROOM = stringPreferencesKey(DataStoreKeys.KEY_ROOM)
     }
     suspend fun putBoolean(key : Preferences.Key<Boolean>, value: Boolean)
     {

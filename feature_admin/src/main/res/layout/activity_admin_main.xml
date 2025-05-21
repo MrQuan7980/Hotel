@@ -35,14 +35,14 @@
                 layout="@layout/edit_button_item" />
 
             <include
-                android:id="@+id/buttonFavorite1"
+                android:id="@+id/buttonService"
                 layout="@layout/edit_button_item" />
 
             <include
-                android:id="@+id/buttonReservation1"
+                android:id="@+id/buttonBookingManager"
                 layout="@layout/edit_button_item" />
             <include
-                android:id="@+id/buttonPerson1"
+                android:id="@+id/buttonGeneralManagement"
                 layout="@layout/edit_button_item" />
 
         </LinearLayout>

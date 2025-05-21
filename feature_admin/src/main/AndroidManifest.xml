@@ -3,7 +3,8 @@
 
     <application>
         <activity
-            android:name=".view.AdminAddRoomActivity"
+            android:name=".view.room.AdminAddRoomActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
             android:exported="false" />
         <activity
             android:name=".activity.AdminMainActivity"

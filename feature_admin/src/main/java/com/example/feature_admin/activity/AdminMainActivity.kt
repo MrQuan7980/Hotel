@@ -9,8 +9,10 @@ import com.example.core.databinding.EditButtonItemBinding
 import com.example.core.`object`.ButtonItem
 import com.example.feature_admin.R
 import com.example.feature_admin.databinding.ActivityAdminMainBinding
-import com.example.feature_admin.fragment.ManagerFragment
-import com.example.feature_admin.fragment.RoomManagerFragment
+import com.example.feature_admin.fragment.AdminToolsFragment
+import com.example.feature_admin.fragment.BookingManagementFragment
+import com.example.feature_admin.fragment.RoomManagementFragment
+import com.example.feature_admin.fragment.ServiceManagementFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -26,25 +28,25 @@ class AdminMainActivity : AppCompatActivity() {
     private fun initButtonMenuBar() {
         val buttonBarItems = listOf(
             ButtonItem(binding.buttonRoomManager,R.drawable.ic_hotel, "Quản lí phòng", 0),
-            ButtonItem(binding.buttonFavorite1, R.drawable.ic_hotel, "Đã lưu", 1),
-            ButtonItem(binding.buttonReservation1,R.drawable.ic_hotel, "Đặt chỗ", 2),
-            ButtonItem(binding.buttonPerson1,R.drawable.ic_hotel, "Người dùng", 3)
+            ButtonItem(binding.buttonService, com.example.core.R.drawable.ic_plane, "Dịch vụ", 1),
+            ButtonItem(binding.buttonBookingManager, R.drawable.ic_booking_admin, "Đặt chỗ", 2),
+            ButtonItem(binding.buttonGeneralManagement, R.drawable.ic_setting_admin, "Quản lí chung", 3)
         )
         var selectedPosition = 0
 
         buttonBarItems.forEachIndexed { index, item ->
             setupButtonBarItem(item.binding, item.iconRes, item.text, selectedPosition)
-            replaceFragment(RoomManagerFragment())
+            replaceFragment(RoomManagementFragment())
             item.binding.root.setOnClickListener {
                 selectedPosition = index
                 buttonBarItems.forEach { otherItem ->
                     setupButtonBarItem(otherItem.binding, otherItem.iconRes, otherItem.text, selectedPosition)
                 }
                 when (index) {
-                    0 -> replaceFragment(RoomManagerFragment())
-                    1 -> replaceFragment(ManagerFragment())
-                    2 -> replaceFragment(RoomManagerFragment())
-                    3 -> replaceFragment(RoomManagerFragment())
+                    0 -> replaceFragment(RoomManagementFragment())
+                    1 -> replaceFragment(ServiceManagementFragment())
+                    2 -> replaceFragment(BookingManagementFragment())
+                    3 -> replaceFragment(AdminToolsFragment())
                 }
             }
         }
@@ -52,9 +54,9 @@ class AdminMainActivity : AppCompatActivity() {
     private fun setupButtonBarItem(itemBinding: EditButtonItemBinding, iconRes: Int, text: String, selectedPosition: Int) {
         val position = when (itemBinding) {
             binding.buttonRoomManager -> 0
-            binding.buttonFavorite1 -> 1
-            binding.buttonReservation1 -> 2
-            binding.buttonPerson1 -> 3
+            binding.buttonService -> 1
+            binding.buttonBookingManager -> 2
+            binding.buttonGeneralManagement -> 3
             else -> -1
         }
         val isSelected = position == selectedPosition

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="1dp"
+    android:layout_margin="1dp"
+    android:background="@drawable/bg_view_comment"
+    android:layout_marginBottom="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.details.IntroduceFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/linearButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/titleEvaluation"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/darkBlue"
+            android:text="@string/btnIntroduction"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iconEvaluation"
+            android:importantForAccessibility="no"
+            android:tint="@color/lightBlue"
+            android:layout_marginStart="-10dp"
+            android:src="@drawable/heading_border"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleEvaluation"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            tools:ignore="UseAppTint" />
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessLeaf">
+            <LinearLayout
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/linearButton"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                tools:ignore="UselessParent">
+
+                <FrameLayout
+                    android:id="@+id/frameImageRoom"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_frame_image_detail_room"
+                    app:layout_constraintTop_toBottomOf="@id/customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    tools:ignore="UselessLeaf">
+
+                    <ImageView
+                        android:id="@+id/imageIntroduceOne"
+                        android:importantForAccessibility="no"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/bg_image_detail_room"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:targetApi="31" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/textIntroduceOne"
+                    style="@style/textViewIntroduce"/>
+
+                <FrameLayout
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_frame_image_detail_room"
+                    app:layout_constraintTop_toBottomOf="@id/customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    tools:ignore="UselessLeaf">
+
+                    <ImageView
+                        android:id="@+id/imageIntroduceTwo"
+                        android:importantForAccessibility="no"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/bg_image_detail_room"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:targetApi="31" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/textIntroduceTwo"
+                    style="@style/textViewIntroduce"/>
+
+                <FrameLayout
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_frame_image_detail_room"
+                    app:layout_constraintTop_toBottomOf="@id/customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    tools:ignore="UselessLeaf">
+
+                    <ImageView
+                        android:id="@+id/imageIntroduceThree"
+                        android:importantForAccessibility="no"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/bg_image_detail_room"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:targetApi="31" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/textIntroduceThree"
+                    style="@style/textViewIntroduce"/>
+
+                <FrameLayout
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_frame_image_detail_room"
+                    app:layout_constraintTop_toBottomOf="@id/customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    tools:ignore="UselessLeaf">
+
+                    <ImageView
+                        android:id="@+id/imageIntroduceFour"
+                        android:importantForAccessibility="no"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/bg_image_detail_room"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:targetApi="31" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/textIntroduceFour"
+                    style="@style/textViewIntroduce"/>
+
+                <FrameLayout
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_frame_image_detail_room"
+                    app:layout_constraintTop_toBottomOf="@id/customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    tools:ignore="UselessLeaf">
+
+                    <ImageView
+                        android:id="@+id/imageIntroduceFive"
+                        android:importantForAccessibility="no"
+                        android:scaleType="centerCrop"
+                        android:clipToOutline="true"
+                        android:layout_margin="1dp"
+                        android:background="@drawable/bg_image_detail_room"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:targetApi="31" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/textIntroduceFive"
+                    style="@style/textViewIntroduce"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</FrameLayout>

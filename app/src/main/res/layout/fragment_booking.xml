@@ -7,68 +7,74 @@
     android:layout_height="match_parent"
     tools:context=".fragment.BookingFragment">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_marginTop="-19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearSearch"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <VideoView
-            android:id="@+id/videoIntro"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_width="match_parent"
-            android:layout_height="230dp"/>
+        android:layout_height="0dp"
+        tools:ignore="UselessLeaf">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="107dp"
-            app:layout_constraintTop_toBottomOf="@+id/videoIntro"
-            app:layout_constraintBottom_toBottomOf="parent">
+            android:layout_height="500dp">
 
-            <ProgressBar
-                android:id="@+id/progressHotel"
-                android:layout_width="wrap_content"
-                android:indeterminateTint="@color/primary"
-                android:layout_height="wrap_content"
+            <VideoView
+                android:id="@+id/videoIntro"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                style="?android:attr/progressBarStyle"/>
+                android:layout_width="match_parent"
+                android:layout_height="230dp"/>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/listHotel"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:padding="4dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                android:layout_marginBottom="95dp"
+                app:layout_constraintTop_toBottomOf="@+id/videoIntro"
+                app:layout_constraintBottom_toBottomOf="parent">
 
-            <TextView
-                style="@style/textViewContentBold"
-                android:id="@+id/noData"
-                android:layout_marginTop="25dp"
-                android:layout_marginBottom="25dp"
-                android:text="@string/textNoBooking"
-                android:textColor="@color/red"
-                android:visibility="invisible"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                <ProgressBar
+                    android:id="@+id/progressHotel"
+                    android:layout_width="wrap_content"
+                    android:indeterminateTint="@color/primary"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    style="?android:attr/progressBarStyle"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewListHotel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    style="@style/textViewContentBold"
+                    android:id="@+id/noData"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    android:text="@string/textNoBooking"
+                    android:textColor="@color/red"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
     <LinearLayout
         android:id="@+id/linearSearch"

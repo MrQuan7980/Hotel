@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:padding="1dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.details.PriceRoomFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@drawable/bg_view_comment"
+        tools:ignore="UselessParent">
+
+        <TextView
+            style="@style/textViewTitle"
+            android:text="@string/textPriceRoom" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/heading_border"
+            tools:ignore="ContentDescription" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:orientation="vertical"
+                android:padding="1dp"
+                app:layout_constraintEnd_toStartOf="@id/btnBookingRoom"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                tools:ignore="UselessLeaf">
+
+                <TextView
+                    android:id="@+id/titleSumMoney"
+                    android:textSize="16sp"
+                    android:textColor="@color/darkBlue"
+                    android:text="@string/textSumMoney"
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_height="0dp"/>
+                <TextView
+                    android:id="@+id/textMoney"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/titleSumMoney"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="@color/darkBlue"
+                    android:paddingTop="10dp"
+                    android:textSize="20sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBookingRoom"
+                style="@style/buttonWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/bg_button_review"
+                android:layout_marginStart="150dp"
+                android:text="@string/btnBook"
+                android:textColor="@color/white"
+                android:layout_height="50dp"
+                android:layout_width="170dp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</FrameLayout>

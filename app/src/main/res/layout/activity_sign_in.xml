@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/primary"
     android:layout_height="match_parent"
-    tools:context=".view.SignInActivity">
+    tools:context=".view.auth.SignInActivity">
 
     <FrameLayout
         android:id="@+id/image_sign_in"

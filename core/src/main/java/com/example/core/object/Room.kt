@@ -1,5 +1,7 @@
 package com.example.core.`object`
 
+import java.io.Serializable
+
 data class Room(
     val admin_id: String?,
     val title: String?,
@@ -18,4 +20,4 @@ data class Room(
     val imageFour: String?,
     val imageFive: String?,
     val isPaid: Boolean? = false
-)
+) : Serializable

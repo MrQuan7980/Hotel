@@ -9,11 +9,13 @@ import com.example.appbookinghotel.R
 import com.example.appbookinghotel.databinding.ActivityMainBinding
 import com.example.appbookinghotel.fragment.BookingFragment
 import com.example.appbookinghotel.fragment.PersonFragment
-import com.example.appbookinghotel.fragment.ReservationFragment
-import com.example.appbookinghotel.fragment.SavedFragment
+import com.example.appbookinghotel.fragment.HistoryFragment
+import com.example.appbookinghotel.fragment.ServiceFragment
 import com.example.core.databinding.EditButtonItemBinding
 import com.example.core.`object`.ButtonItem
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,10 +27,10 @@ class MainActivity : AppCompatActivity() {
     }
     private fun initButtonMenuBar() {
         val buttonBarItems = listOf(
-            ButtonItem(binding.buttonHome, R.drawable.ic_hotel, "Đặt phòng", 0),
-            ButtonItem(binding.buttonFavorite, R.drawable.ic_favorite, "Đã lưu", 1),
-            ButtonItem(binding.buttonReservation, R.drawable.ic_luggage, "Đặt chỗ", 2),
-            ButtonItem(binding.buttonPerson, R.drawable.ic_person, "Người dùng", 3)
+            ButtonItem(binding.buttonHome, com.example.core.R.drawable.ic_bed, "Đặt phòng", 0),
+            ButtonItem(binding.buttonFavorite, com.example.core.R.drawable.ic_plane, "Dịch vụ", 1),
+            ButtonItem(binding.buttonReservation, com.example.core.R.drawable.ic_clock, "Lịch sử", 2),
+            ButtonItem(binding.buttonPerson, com.example.core.R.drawable.ic_person, "Người dùng", 3)
         )
         var selectedPosition = 0
 
@@ -42,8 +44,8 @@ class MainActivity : AppCompatActivity() {
                 }
                 when (index) {
                     0 -> replaceFragment(BookingFragment())
-                    1 -> replaceFragment(SavedFragment())
-                    2 -> replaceFragment(ReservationFragment())
+                    1 -> replaceFragment(ServiceFragment())
+                    2 -> replaceFragment(HistoryFragment())
                     3 -> replaceFragment(PersonFragment())
                 }
             }

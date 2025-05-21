@@ -85,4 +85,8 @@ dependencies {
     // thư viện hilt
     implementation(libs.android.hilt.android)
     kapt(libs.android.hilt.android.compiler)
+
+    implementation(libs.lifecycle.viewmodel)
+    implementation(libs.activity.ktx)
+    implementation(libs.androidx.fragment.ktx)
 }

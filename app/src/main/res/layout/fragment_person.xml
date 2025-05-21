@@ -6,24 +6,163 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.PersonFragment">
 
-    <TextView
-        android:id="@+id/textViewName"
-        android:textSize="16sp"
+    <LinearLayout
+        android:id="@+id/linearIntroduce"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_gravity="center"
-        style="@style/textView"/>
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_head_plane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessLeaf">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonLogOut"
-        android:text="@string/logout"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/bg_button_transparent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        <TextView
+            style="@style/textViewTitle"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="48dp"
+            android:gravity="center"
+            android:text="@string/titleIntroduce1" />
+
+        <TextView
+            android:id="@+id/textInformation"
+            style="@style/textViewIntroduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/textIntroduce"
+            android:textColor="@color/darkBlue"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_margin="16dp"
-        style="@style/buttonWhite"/>
+        app:layout_constraintTop_toBottomOf="@id/linearIntroduce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/phoneSofitel"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:drawablePadding="7dp"
+                android:drawableTint="@color/blueIntroduce"
+                android:textColor="@color/blueIntroduce"
+                android:drawableStart="@drawable/ic_phone_introduce"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:ignore="UseCompatTextViewDrawableXml" />
+
+            <TextView
+                android:text="@string/emailSofitel"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:drawablePadding="7dp"
+                android:drawableTint="@color/blueIntroduce"
+                android:textColor="@color/blueIntroduce"
+                android:drawableStart="@drawable/ic_email_introduce"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:ignore="UseCompatTextViewDrawableXml" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iconEvaluation"
+            android:importantForAccessibility="no"
+            android:tint="@color/blueIntroduce"
+            android:layout_marginStart="-10dp"
+            android:src="@drawable/heading_border"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleEvaluation"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:text="@string/itemIntroduce"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:drawablePadding="7dp"
+            android:layout_marginTop="16dp"
+            android:drawableTint="@color/blueIntroduce"
+            android:textColor="@color/blueIntroduce"
+            android:drawableStart="@drawable/ic_infomation"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="InefficientWeight,UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:text="@string/itemBook"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:drawablePadding="7dp"
+            android:layout_marginTop="16dp"
+            android:drawableTint="@color/blueIntroduce"
+            android:textColor="@color/blueIntroduce"
+            android:drawableStart="@drawable/ic_book"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="InefficientWeight,UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:text="@string/itemPolicy"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:drawablePadding="7dp"
+            android:layout_marginTop="16dp"
+            android:drawableTint="@color/blueIntroduce"
+            android:textColor="@color/blueIntroduce"
+            android:drawableStart="@drawable/ic_policy"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="InefficientWeight,UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:text="@string/itemSupport"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:drawablePadding="7dp"
+            android:layout_marginTop="16dp"
+            android:drawableTint="@color/blueIntroduce"
+            android:textColor="@color/blueIntroduce"
+            android:drawableStart="@drawable/ic_support"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="InefficientWeight,UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:id="@+id/settingsAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_setting"
+            android:drawablePadding="7dp"
+            android:drawableTint="@color/blueIntroduce"
+            android:text="@string/itemSettingAccount"
+            android:textColor="@color/blueIntroduce"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="InefficientWeight,UseCompatTextViewDrawableXml" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
