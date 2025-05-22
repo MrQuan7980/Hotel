@@ -3,6 +3,8 @@ package com.example.appbookinghotel.di
 import com.example.appbookinghotel.model.auth.ForgotPasswordRepository
 import com.example.appbookinghotel.model.auth.RegisterRepository
 import com.example.appbookinghotel.model.auth.SignInRepository
+import com.example.appbookinghotel.model.history.ActiveTripRepository
+import com.example.appbookinghotel.model.room.ConfirmBookingRepository
 import com.example.appbookinghotel.model.room.IntroduceRepository
 import com.example.appbookinghotel.model.room.ReviewRoomRepository
 import com.example.appbookinghotel.model.room.UserRoomRepository
@@ -57,5 +59,16 @@ object AppModule {
     @Singleton
     fun provideIntroduce() : IntroduceRepository{
         return IntroduceRepository()
+    }
+    @Provides
+    @Singleton
+    fun provideBooking() : ConfirmBookingRepository{
+        return ConfirmBookingRepository()
+    }
+
+    @Provides
+    @Singleton
+    fun provideActiveTrip() : ActiveTripRepository{
+        return ActiveTripRepository()
     }
 }

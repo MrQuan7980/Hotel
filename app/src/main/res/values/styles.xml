@@ -22,4 +22,8 @@
         <item name="cornerSize">8%</item>
     </style>
 
+    <style name="ShapeAppearanceOverlay.Radius2" parent="">
+        <item name="cornerSize">6dp</item>
+    </style>
+
 </resources>

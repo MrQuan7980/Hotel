@@ -77,7 +77,6 @@
     <string name="textCar">Xe ô tô</string>
 
     // text introduce
-
     <string name="titleIntroduce1">Sofitel Legend Metropole Hà Nội – Biểu tượng \n của sự sang trọng và lịch sử</string>
     <string name="phoneSofitel">0292999999</string>
     <string name="emailSofitel">sofitel@hanoi.com</string>
@@ -99,5 +98,9 @@
     <string name="textRequest">Nhập yêu cầu của bạn</string>
 
     <string name="textQuantity">Số lượng</string>
+
+    <string name="activeTrip">Trạng thái đặt phòng hiện tại</string>
+    <string name="pastTrip">Trạng thái đặt phòng gần đây</string>
+    <string name="cancelTrip">Phòng đã hủy gần đây</string>
 
 </resources>

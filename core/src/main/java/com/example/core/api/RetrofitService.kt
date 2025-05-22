@@ -57,4 +57,9 @@ interface RetrofitService {
     @POST("booking.json")
     suspend fun insertBooking(@Body booking: Booking) : retrofit2.Response<Booking>
 
+    @PATCH("room/{key}.json")
+    suspend fun updateStatus(@Path("key") key : String, @Body status : Map<String, Boolean>) : Response<Void>
+
+    @GET("booking.json")
+    suspend fun getBooking() : Map<String, Booking>
 }

@@ -5,7 +5,7 @@ import java.io.Serializable
 data class Room(
     val admin_id: String?,
     val title: String?,
-    val numberRoom: Int?,
+    var numberRoom: Int?,
     val address: String?,
     val city: String?,
     val area: Int?,

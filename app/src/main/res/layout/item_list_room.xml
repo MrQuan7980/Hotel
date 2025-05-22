@@ -32,7 +32,6 @@
 
         <FrameLayout
             android:id="@+id/statusRoom"
-            android:visibility="gone"
             android:background="@drawable/bg_already_booked"
             android:padding="9dp"
             android:layout_margin="10dp"
@@ -48,7 +47,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </FrameLayout>
-
 
         <TextView
             style="@style/textViewTitle"

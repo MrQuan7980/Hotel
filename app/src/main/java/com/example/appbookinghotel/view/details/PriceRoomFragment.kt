@@ -43,11 +43,12 @@ class PriceRoomFragment : Fragment() {
             startActivity(intent)
         }
     }
-    @SuppressLint("SetTextI18n")
     private fun getDataRoom()
     {
         viewModel.room.observe(viewLifecycleOwner) {data ->
             binding.textMoney.text = formatMoney(data.money!!) + " đ"
+
+            binding.btnNotAvailable.visibility = if (data.status == true) View.VISIBLE else View.GONE
         }
     }
     private fun formatMoney (number: Int) : String

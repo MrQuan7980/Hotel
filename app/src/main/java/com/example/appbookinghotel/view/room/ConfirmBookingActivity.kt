@@ -12,19 +12,25 @@ import android.widget.EditText
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.appbookinghotel.activity.MainActivity
 import com.example.appbookinghotel.databinding.ActivityConfirmBookingBinding
 import com.example.appbookinghotel.viewmodel.room.ConfirmBookingViewModel
 import com.example.appbookinghotel.viewmodel.room.StatusConfirm
 import com.example.core.local.DataStoreKeys
 import com.example.core.local.PerformDataStore
+import com.example.core.`object`.Booking
 import com.example.core.`object`.Room
+import com.example.core.utils.openIntent
 import com.example.core.utils.setMessage
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.first
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
+import java.util.UUID
 import java.util.concurrent.TimeUnit
 
+@AndroidEntryPoint
 class ConfirmBookingActivity : AppCompatActivity() {
     private lateinit var binding : ActivityConfirmBookingBinding
     private val viewModel : ConfirmBookingViewModel by viewModels()
@@ -32,6 +38,12 @@ class ConfirmBookingActivity : AppCompatActivity() {
     private var quantity : Int = 1
     private var people : Int = 0
     private var money : Int = 0
+    private var adminId : String = ""
+    private var city : String = ""
+    private var sumMoney : Int = 0
+    private var titleRoom : String = ""
+    private var numberRoom : Int = 0
+    private var image : String = ""
     private val dataStore : PerformDataStore by lazy {
         PerformDataStore(applicationContext)
     }
@@ -53,12 +65,64 @@ class ConfirmBookingActivity : AppCompatActivity() {
         binding.btnBookingRoom.setOnClickListener {
             if (validate())
             {
-
+                insertBooking()
             }
         }
         binding.dateCheckIn.setOnClickListener { showDate(binding.dateCheckIn) }
         binding.dateCheckOut.setOnClickListener { showDate(binding.dateCheckOut) }
 
+    }
+    private fun insertBooking()
+    {
+        try {
+            lifecycleScope.launchWhenStarted {
+                val id = UUID.randomUUID().toString()
+                val userId = dataStore.getString(PerformDataStore.KEY_ID).first()
+                val address = binding.textAddress.text.toString()
+                val dateCheckIn = binding.dateCheckIn.text.toString()
+                val dateCheckOut = binding.dateCheckOut.text.toString()
+                val note = binding.textNote.text.toString()
+
+                val booking = Booking(
+                    adminId, id,
+                    userId,
+                    titleRoom,
+                    numberRoom,
+                    address,
+                    city,
+                    quantity,
+                    image,
+                    sumMoney,
+                    dateCheckIn,
+                    dateCheckOut,
+                    note,
+                    isCheckedIn = false,
+                    isCheckedOut = false
+                )
+                viewModel.insertBooking(booking)
+            }
+        }catch (e : Exception)
+        {
+            Log.e("ERROR_BOOKING", "Exception: ", e)
+        }
+    }
+    private fun getDataRoom()
+    {
+        viewModel.room.observe(this) { data ->
+            lifecycleScope.launchWhenStarted {
+                binding.textName.text = dataStore.getString(PerformDataStore.KEY_NAME).first()
+                binding.textPhone.text = dataStore.getString(PerformDataStore.KEY_PHONE).first()
+                binding.textAddress.text = data?.address
+                binding.titleRoom.text = data?.title
+                data?.maxGuests?.let { people = it }
+                data?.money?.let { money = it }
+                titleRoom = data?.title.orEmpty()
+                numberRoom = data?.numberRoom ?: 0
+                city = data?.city.orEmpty()
+                adminId = data?.admin_id.toString()
+                image = data?.imageOne.toString()
+            }
+        }
     }
     private fun sumQuantity()
     {
@@ -82,7 +146,9 @@ class ConfirmBookingActivity : AppCompatActivity() {
     private fun updateQuantity()
     {
         binding.textQuantity.text = quantity.toString()
+        totalAmount()
     }
+
     private fun validate(): Boolean {
         val checkInStr = binding.dateCheckIn.text.toString().trim()
         val checkOutStr = binding.dateCheckOut.text.toString().trim()
@@ -97,7 +163,6 @@ class ConfirmBookingActivity : AppCompatActivity() {
         val today = calendar.time
         val checkInDate = try { dateFormat.parse(checkInStr) } catch (e: Exception) { null }
         val checkOutDate = try { dateFormat.parse(checkOutStr) } catch (e: Exception) { null }
-        val note = binding.textNote.text.toString().trim()
 
         if (checkInDate == null || checkOutDate == null)
         {
@@ -125,7 +190,6 @@ class ConfirmBookingActivity : AppCompatActivity() {
 
         return true
     }
-
     private fun setUpWatcher()
     {
         binding.dateCheckIn.addTextChangedListener(moneyWatcher)
@@ -148,30 +212,12 @@ class ConfirmBookingActivity : AppCompatActivity() {
     {
         if (validate())
         {
-            var money = result * money
+            sumMoney = result * money
             if (binding.children.isChecked)
             {
-                money = (money * 0.9).toInt()
+                sumMoney = (sumMoney * 0.9).toInt()
             }
-            binding.textMoney.text = "${formatMoney(money)} đ"
-        }
-    }
-    private fun getDataRoom()
-    {
-        viewModel.room.observe(this) { data ->
-            lifecycleScope.launchWhenStarted {
-                binding.textName.text = dataStore.getString(PerformDataStore.KEY_NAME).first()
-                binding.textPhone.text = dataStore.getString(PerformDataStore.KEY_PHONE).first()
-                binding.textAddress.text = data?.address
-                binding.titleRoom.text = data?.title
-                data?.maxGuests?.let {
-                    people = it
-                }
-                data?.money?.let {
-                    money = it
-                }
-
-            }
+            binding.textMoney.text = "${formatMoney(sumMoney)} đ"
         }
     }
     private fun formatMoney (number: Int) : String
@@ -206,7 +252,13 @@ class ConfirmBookingActivity : AppCompatActivity() {
             when(status) {
                 is StatusConfirm.Normal -> {}
                 is StatusConfirm.Success -> {
-
+                }
+                is StatusConfirm.BookingSuccess -> {
+                    viewModel.updateStatusRoom(numberRoom)
+                    openIntent<MainActivity>()
+                }
+                is StatusConfirm.UpdateSuccess -> {
+                    setMessage("Đặt phòng thành công")
                 }
                 is StatusConfirm.Error -> {
                     setMessage(status.message)

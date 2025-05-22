@@ -25,7 +25,7 @@
     <string name="titlePriceRoom"></string>
     <string name="textSumMoney">Tổng tiền</string>
     <string name="btnBook">Đặt ngay</string>
-
+    <string name="btnNotAvailable">Hết phòng</string>
     <string name="titleIntroduce">Giới thiệu</string>
     <string name="textIntroduce">Khám phá Hà Nội</string>
 

@@ -55,10 +55,13 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/viewActiveTrip"
                 style="@style/bgViewImageHeadHistory"
                 tools:ignore="ContentDescription" />
 
             <TextView
+                android:id="@+id/btnActiveTrip"
+                android:padding="5dp"
                 style="@style/textViewHistory"
                 android:text="@string/isActive" />
 
@@ -70,10 +73,14 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/viewPastTrip"
+                android:visibility="gone"
                 style="@style/bgViewImageHeadHistory"
                 tools:ignore="ContentDescription" />
 
             <TextView
+                android:id="@+id/btnPastTrip"
+                android:padding="5dp"
                 style="@style/textViewHistory"
                 android:text="@string/textPast" />
 
@@ -85,10 +92,14 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/viewCanceled"
+                android:visibility="gone"
                 style="@style/bgViewImageHeadHistory"
                 tools:ignore="ContentDescription" />
 
             <TextView
+                android:id="@+id/btnCanceled"
+                android:padding="5dp"
                 style="@style/textViewHistory"
                 android:text="@string/textCanceled" />
 
@@ -105,15 +116,12 @@
     </LinearLayout>
 
     <FrameLayout
+        android:id="@+id/fragment"
         app:layout_constraintTop_toBottomOf="@id/linearView"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="UselessLeaf">
-
-
-
-    </FrameLayout>
+        tools:ignore="UselessLeaf"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
